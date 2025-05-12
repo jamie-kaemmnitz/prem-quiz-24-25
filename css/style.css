@@ -1,0 +1,140 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.home-page {
+    background-image: url(../images/football-pitch-vertical.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2.2rem;
+}
+
+.home-page img {
+    height: 6rem;
+    width: 6rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0 1rem;
+    word-break: break-word;
+    color: black;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0 1rem;
+    word-break: break-word;
+    color: black;
+}
+
+a {
+    height: 3rem;
+    width: 7rem;
+    background-color: grey;
+    color: navy;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.instructions-body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+}
+
+.instructions-body > * {
+    position: relative;
+    z-index: 1;
+}
+
+.instructions-body {
+    background-image: url(../images/football-stadium.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.instructions-body p {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0 1rem;
+    word-break: break-word;
+    color: black;
+}
+
+.final-score-body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/football-pitch-vertical.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.final-score {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    text-align: center;
+    word-break: break-word;
+}
+
+.final-score img {
+    height: 10rem;
+    max-width: 90%;
+    margin: 1rem 0;
+    object-fit: contain;
+}
+
+.final-score h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.final-score h4 {
+    font-size: 2.8rem;
+    margin: 2rem 0 1rem;
+    font-weight: bolder;
+}
+
+.final-score h5 {
+    font-size: 1.8rem;
+    font-weight: bolder;
+}
