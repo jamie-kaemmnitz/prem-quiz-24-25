@@ -214,6 +214,7 @@ a {
     display: block;
     object-fit: contain;
     margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 #computer-scored img {
@@ -223,6 +224,12 @@ a {
     display: block;
     object-fit: contain;
     margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.continue-button {
+    height: 3rem;
+    width: 9rem;
 }
 
 .correct-answers {
