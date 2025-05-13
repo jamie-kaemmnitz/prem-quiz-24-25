@@ -200,6 +200,11 @@ a {
     text-align: center;
     box-sizing: border-box;
     padding: 1rem;
+    background-image: url(/images/football-pitch-vertical.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-weight: bolder;
 }
 
 #you-scored img {
@@ -268,4 +273,361 @@ footer a {
     padding: 0;
     margin: 0;
     height: 100%;
+}
+
+#arsenal {
+    background: linear-gradient(
+    to right,
+     white 0%,
+     white 5%,
+     red 6%, 
+     red 94%, 
+     white 95%,
+     white 100%
+     );
+}
+
+#aston-villa {
+    background: linear-gradient(
+    to right,
+     rgb(111, 159, 175) 0%,
+     rgb(111, 159, 175) 5%,
+     maroon 6%, 
+     maroon 94%, 
+     rgb(111, 159, 175) 95%,
+     rgb(111, 159, 175) 100%
+     );
+}
+
+#aston-villa h2,
+#aston-villa h6 {
+    color: antiquewhite;
+}
+
+#bournemouth {
+    background: linear-gradient(
+    to right,
+     rgb(1, 6, 8) 0%,
+     rgb(1, 6, 8) 5%,
+     maroon 6%, 
+     maroon 35%, 
+     rgb(1, 6, 8) 36%,
+     rgb(1, 6, 8) 65%,
+     maroon 66%, 
+     maroon 95%, 
+     rgb(1, 6, 8) 96%,
+     rgb(1, 6, 8) 100%
+     );
+}
+
+#bournemouth h2,
+#bournemouth h6 {
+    color: antiquewhite;
+}
+
+#brentford {
+    background: linear-gradient(
+    to right,
+     white 0%,
+     white 5%,
+     red 6%, 
+     red 35%, 
+     white 36%,
+     white 65%,
+     red 66%, 
+     red 95%, 
+     white 96%,
+     white 100%
+     );    
+}
+
+#brentford h2,
+#brentford h6 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#brighton {
+    background: linear-gradient(
+    to right,
+     blue 0%, 
+     blue 10%, 
+     white 11%,
+     white 21%,
+     blue 22%, 
+     blue 32%, 
+     white 33%,
+     white 43%,
+     blue 44%, 
+     blue 56%, 
+     white 57%,
+     white 67%,
+     blue 68%, 
+     blue 78%, 
+     white 79%,
+     white 89%,
+     blue 90%, 
+     blue 100%
+     );       
+}
+
+#brighton h2,
+#brighton h6 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#chelsea {
+    background-color: navy;
+}
+
+#chelsea h2,
+#chelsea h6 {
+    color: antiquewhite;
+}
+
+#crystal-palace {
+    background: linear-gradient(
+    to right,
+     red 0%,
+     red 5%,
+     blue 6%, 
+     blue 35%, 
+     red 36%,
+     red 65%,
+     blue 66%, 
+     blue 95%, 
+     red 96%,
+     red 100%
+     );    
+}
+
+#crystal-palace h2,
+#crystal-palace h6 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#everton {
+    background-color: blue;
+}
+
+#everton h2,
+#everton h6 {
+    color: antiquewhite;
+}
+
+#fulham {
+    background: linear-gradient(
+    to right,
+     black 0%,
+     black 2%,
+     white 3%, 
+     white 97%, 
+     black 98%,
+     black 100%
+     );
+}
+
+#ipswich {
+    background: linear-gradient(
+    to right,
+     white 0%,
+     white 2%,
+     blue 3%, 
+     blue 17%, 
+     white 18%,
+     white 18%,
+     blue 19%, 
+     blue 33%, 
+     white 34%,
+     white 34%,
+     blue 35%, 
+     blue 49%, 
+     white 50%,
+     white 50%,
+     blue 51%, 
+     blue 65%, 
+     white 66%,
+     white 66%,
+     blue 67%, 
+     blue 81%,
+     white 82%,
+     white 82%,
+     blue 83%, 
+     blue 98%,
+     white 99%,
+     white 100%
+     );       
+}
+
+#ipswich h2,
+#ipswich h6 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#leicester {
+    background: linear-gradient(
+    to right,
+     white 0%,
+     white 1%,
+     blue 2%, 
+     blue 98%, 
+     white 99%,
+     white 100%
+     );
+}
+
+#leicester h2,
+#leicester h6 {
+    color: antiquewhite;
+}
+
+#liverpool {
+    background: linear-gradient(
+    to right,
+     gold 0%,
+     gold 1%,
+     rgb(160, 34, 34) 2%, 
+     rgb(160, 34, 34) 17%, 
+     gold 18%,
+     gold 18%,
+     rgb(160, 34, 34) 19%, 
+     rgb(160, 34, 34) 33%, 
+     gold 34%,
+     gold 34%,
+     rgb(160, 34, 34) 35%, 
+     rgb(160, 34, 34) 49%, 
+     gold 50%,
+     gold 50%,
+     rgb(160, 34, 34) 51%, 
+     rgb(160, 34, 34) 65%, 
+     gold 66%,
+     gold 66%,
+     rgb(160, 34, 34) 67%, 
+     rgb(160, 34, 34) 81%,
+     gold 82%,
+     gold 82%,
+     rgb(160, 34, 34) 83%, 
+     rgb(160, 34, 34) 98%,
+     gold 99%,
+     gold 100%
+     );   
+}
+
+#liverpool h2,
+#liverpool h6 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#man-city {
+    background-color: skyblue;
+}
+
+#man-utd {
+    background: linear-gradient(
+    to right,
+     white 0%,
+     white 1%,
+     rgb(205, 24, 24) 2%, 
+     rgb(205, 24, 24) 98%, 
+     white 99%,
+     white 100%
+     );
+}
+
+#newcastle {
+    background: linear-gradient(
+    to right,
+     black 0%,
+     black 5%,
+     white 6%, 
+     white 35%, 
+     black 36%,
+     black 65%,
+     white 66%, 
+     white 95%, 
+     black 96%,
+     black 100%
+     );   
+}
+
+#newcastle h2,
+#newcastle h6 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#nottingham-forest {
+    background: linear-gradient(
+    to right,
+     white 0%,
+     white 1%,
+     red 2%, 
+     red 98%, 
+     white 99%,
+     white 100%
+     );    
+}
+
+#southampton {
+    background: linear-gradient(
+    to right,
+     red 0%, 
+     red 12%, 
+     white 13%,
+     white 26%,
+     red 27%, 
+     red 41%, 
+     white 42%,
+     white 55%,
+     red 56%, 
+     red 70%, 
+     white 71%,
+     white 85%,
+     red 86%, 
+     red 100%
+     );    
+}
+
+#southampton h2,
+#southampton h6 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#tottenham {
+        background: linear-gradient(
+    to right,
+     rgb(29, 11, 76) 0%,
+     rgb(29, 11, 76) 4%,
+     white 5%, 
+     white 95%, 
+     rgb(29, 11, 76) 96%,
+     rgb(29, 11, 76) 100%
+     );
+}
+
+#west-ham {
+    background: linear-gradient(
+    to right,
+     rgb(111, 159, 175) 0%,
+     rgb(111, 159, 175) 5%,
+     maroon 6%, 
+     maroon 94%, 
+     rgb(111, 159, 175) 95%,
+     rgb(111, 159, 175) 100%
+     );
+}
+
+#west-ham h2,
+#west-ham h6 {
+    color: antiquewhite;
+}
+
+#wolves {
+    background: linear-gradient(
+    to right,
+     black 0%,
+     black 1%,
+     rgb(183, 132, 3) 2%, 
+     rgb(183, 132, 3) 98%, 
+     black 99%,
+     black 100%
+     );    
 }
