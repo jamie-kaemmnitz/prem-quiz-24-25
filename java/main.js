@@ -34,6 +34,9 @@ const youScored = document.getElementById('you-scored');
 const computerScored = document.getElementById('computer-scored');
 const endOfQuiz = document.getElementById('end-of-quiz');
 
+let userScore = 0;
+let computerScore = 0;
+
 Array.from(correctAnswer).forEach(answer => {
     answer.style.display = 'none';
 });
@@ -74,9 +77,20 @@ answers.forEach(function(answer) {
         if (answer.getAttribute('data-correct') === 'true') {
             const goodChoice = parentDiv.querySelector('.correct-answers');
             goodChoice.style.display = 'flex';
+            userScore++;
+
+            if (userScore %4 === 0 && userScore !== 0) {
+                youScored.style.display = 'flex';
+            }
+
         } else {
             const badChoice = parentDiv.querySelector('.wrong-answers');
             badChoice.style.display = 'flex';
+            computerScore++;
+
+            if (computerScore %4 === 0 && computerScore !== 0) {
+                computerScored.style.display = 'flex';
+            }
         }
 
         const nextButton = parentDiv.querySelector('.next-question');
@@ -97,4 +111,15 @@ Array.from(nextQuestionButton).forEach(button => {
             endOfQuiz.style.display = 'flex';
         }
     });
+});
+
+Array.from(continueButton).forEach(button => {
+    button.addEventListener('click', function () {
+        youScored.style.display = 'none';
+        computerScored.style.display = 'none';
+    });
+});
+
+checkScoreButton.addEventListener('click', function () {
+    window.location.href = `results.html?user=${userScore}&computer=${computerScore}`;
 });
