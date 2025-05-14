@@ -164,7 +164,7 @@ a {
     word-break: break-word;
     text-align: center;
     box-sizing: border-box;
-    padding: 1rem;
+    padding: 8rem 1rem 1rem;
     gap: 1rem;
 }
 
@@ -186,6 +186,13 @@ a {
     font-size: 0.9rem;
     line-height: 1;
     flex-shrink: 0;
+}
+
+.next-question {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
 }
 
 #you-scored,

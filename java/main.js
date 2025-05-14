@@ -1,4 +1,4 @@
-const startButton = document.getElementById('start-button');
+
 const nextQuestionButton = document.getElementsByClassName('next-question');
 const continueButton = document.getElementsByClassName('continue-button');
 const checkScoreButton = document.getElementById('check-score');
@@ -24,21 +24,63 @@ const tottenhamQuestion = document.getElementById('tottenham');
 const westHamQuestion = document.getElementById('west-ham');
 const wolvesQuestion = document.getElementById('wolves');
 
-const correctAnswers = document.getElementsByClassName('correct-answers');
+let questionsArray = [arsenalQuestion, astonVillaQuestion, bournemouthQuestion, brentfordQuestion, brightonQuestion, chelseaQuestion, crystalPalaceQuestion, evertonQuestion, fulhamQuestion, ipswichQuestion, leicesterQuestion, liverpoolQuestion, manCityQuestion, manUtdQuestion, newcastleQuestion, nottinghamForestQuestion, southamptonQuestion, tottenhamQuestion, westHamQuestion, wolvesQuestion]
+
+const answers = Array.from(document.getElementsByClassName('answers'));
+const correctAnswer = document.getElementsByClassName('correct-answers');
 const wrongAnswer = document.getElementsByClassName('wrong-answers');
 
 const youScored = document.getElementById('you-scored');
 const computerScored = document.getElementById('computer-scored');
 const endOfQuiz = document.getElementById('end-of-quiz');
 
-const fiveNilScore = document.getElementById('five-nil');
-const fourNilScore = document.getElementById('four-nil');
-const fourOneScore = document.getElementById('four-one');
-const threeOneScore = document.getElementById('three-one');
-const threeTwoScore = document.getElementById('three-two');
-const twoTwoScore = document.getElementById('two-two');
-const twoThreeScore = document.getElementById('two-three');
-const oneThreeScore = document.getElementById('one-three');
-const oneFourScore = document.getElementById('one-four');
-const nilFourScore = document.getElementById('nil-four');
-const nilFiveScore = document.getElementById('nil-five');
+const randomQuestion = questionsArray[Math.floor(Math.random() * questionsArray.length)];
+
+Array.from(correctAnswer).forEach(answer => {
+    answer.style.display = 'none';
+});
+
+Array.from(wrongAnswer).forEach(answer => {
+    answer.style.display = 'none';
+});
+
+Array.from(nextQuestionButton).forEach(button => {
+    button.style.display = 'none';
+});
+
+youScored.style.display = 'none';
+computerScored.style.display = 'none';
+endOfQuiz.style.display = 'none';
+
+questionsArray.forEach(question => {
+    question.style.display = 'none';
+});
+
+//code help from Chat GPT
+const params = new URLSearchParams(window.location.search);
+const questionIndex = parseInt(params.get('question'), 10);
+
+if (!isNaN(questionIndex) && questionsArray[questionIndex]) {
+    questionsArray[questionIndex].style.display = 'block';
+
+}
+
+let currentQuestion = questionsArray[questionIndex];
+//
+
+answers.forEach(function(answer) {
+    answer.addEventListener('click', function () {
+        const parentDiv = answer.closest('.questions');
+
+        if (answer.getAttribute('data-correct') === 'true') {
+            const goodChoice = parentDiv.querySelector('.correct-answers');
+            goodChoice.style.display = 'block';
+        } else {
+            const badChoice = parentDiv.querySelector('.wrong-answers');
+            badChoice.style.display = 'block';
+        }
+
+        const nextButton = parentDiv.querySelector('.next-question');
+        nextButton.style.display = 'block';
+    });
+});
