@@ -164,7 +164,7 @@ a {
     word-break: break-word;
     text-align: center;
     box-sizing: border-box;
-    padding: 8rem 1rem 1rem;
+    padding: 1rem;
     gap: 1rem;
 }
 
@@ -257,7 +257,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
 }
 
 #end-of-quiz h2{
@@ -265,6 +265,8 @@ a {
     color: navy;
     background-color:  rgba(255, 255, 255, 0.5);
     margin-bottom: 3rem;
+    text-align: center;
+    margin-top: 55%;
 }
 
 #check-score {
@@ -272,6 +274,9 @@ a {
     width: 10rem;
     font-size: 1rem;
     font-display: underline;
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
 footer {

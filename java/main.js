@@ -34,8 +34,6 @@ const youScored = document.getElementById('you-scored');
 const computerScored = document.getElementById('computer-scored');
 const endOfQuiz = document.getElementById('end-of-quiz');
 
-const randomQuestion = questionsArray[Math.floor(Math.random() * questionsArray.length)];
-
 Array.from(correctAnswer).forEach(answer => {
     answer.style.display = 'none';
 });
@@ -60,12 +58,13 @@ questionsArray.forEach(question => {
 const params = new URLSearchParams(window.location.search);
 const questionIndex = parseInt(params.get('question'), 10);
 
-if (!isNaN(questionIndex) && questionsArray[questionIndex]) {
-    questionsArray[questionIndex].style.display = 'block';
-
+if (!isNaN(questionIndex) || questionIndex < 0 || questionIndex >= questionsArray.length) {
+    questionsArray[questionIndex].style.display = 'flex';
+    currentQuestionIndex = questionIndex;
+} else {
+    currentQuestionIndex = Math.floor(Math.random() * questionsArray.length);
+    questionsArray[currentQuestionIndex].style.display = 'flex';
 }
-
-let currentQuestion = questionsArray[questionIndex];
 //
 
 answers.forEach(function(answer) {
@@ -74,13 +73,28 @@ answers.forEach(function(answer) {
 
         if (answer.getAttribute('data-correct') === 'true') {
             const goodChoice = parentDiv.querySelector('.correct-answers');
-            goodChoice.style.display = 'block';
+            goodChoice.style.display = 'flex';
         } else {
             const badChoice = parentDiv.querySelector('.wrong-answers');
-            badChoice.style.display = 'block';
+            badChoice.style.display = 'flex';
         }
 
         const nextButton = parentDiv.querySelector('.next-question');
-        nextButton.style.display = 'block';
+        nextButton.style.display = 'flex';
+    });
+});
+
+Array.from(nextQuestionButton).forEach(button => {
+    button.addEventListener('click', function () {
+        questionsArray.forEach(question => question.style.display = 'none');
+
+        questionsArray.splice(currentQuestionIndex, 1);
+
+        if (questionsArray.length > 0) {
+            currentQuestionIndex = Math.floor(Math.random() * questionsArray.length);
+            questionsArray[currentQuestionIndex].style.display = 'flex';
+        } else {
+            endOfQuiz.style.display = 'flex';
+        }
     });
 });
