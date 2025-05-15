@@ -818,6 +818,7 @@ footer a {
 
     .questions h6 {
         font-size: 1.6rem;
+        width: 80%;
     }
 
     .correct-answers,
