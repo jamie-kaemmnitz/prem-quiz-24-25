@@ -203,7 +203,7 @@ a {
 } 
 
 #you-scored,
-            #computer-scored {
+#computer-scored {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -670,4 +670,211 @@ footer a {
      black 99%,
      black 100%
      );    
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    a {
+        height: 6rem;
+        width: 12rem;
+        font-size: 2rem;
+    }
+
+    .home-page img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .instructions-body p {
+        font-size: 1.8rem;
+    }
+
+    .questions {
+        height: 95vh;
+    }
+
+    .questions h2 {
+        font-size: 3.5rem;
+    }
+
+    .questions h6 {
+        font-size: 1.9rem;
+        max-width: 80%;
+    }
+
+    .questions button {
+        height: 3.5rem;
+        width: 70%;
+        font-size: 1.5rem;
+    }
+
+    .next-question {
+        height: 3.5rem
+        !important;
+        font-size: 1.8rem
+        !important;
+        text-align: center
+        !important;
+    }
+
+    .correct-answers,
+    .wrong-answers {
+        font-size: 1.5rem;
+    }
+
+    #you-scored h2,
+    #computer-scored h2 {
+        font-size: 4rem;
+    }
+    
+    .continue-button {
+        height: 6rem;
+        width: 12rem;
+        font-size: 1.5rem;
+    }
+
+    footer {
+        height: 5vh;
+    }
+
+    footer a {
+        font-size: 1.5rem;
+    }
+
+    #end-of-quiz {
+        height: 95vh;
+    }
+
+    #end-of-quiz h2{
+        font-size: 4.5rem;
+    }
+
+    #check-score {
+        height: 8rem;
+        width: 16rem;
+        font-size: 1.8rem;
+    }
+
+    .final-score img {
+        height: 15rem;
+        width: 90%;
+    }
+
+    .final-score h2 {
+        font-size: 4.5rem;
+    }
+
+    .final-score h4 {
+        font-size: 4.2rem;
+    }
+
+    .final-score h5 {
+        font-size: 2.2rem;
+        font-weight: bolder;
+    }
+
+}
+
+@media (min-width: 1025px) {
+
+    .home-page {
+        background-image: url(/images/football-pitch.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        overflow-x: hidden;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+    }
+
+    h3 {
+        font-size: 3.5rem;
+    }
+
+    .home-page img {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .questions {
+        height: 95vh;
+    }
+
+    .questions h2 {
+        font-size: 3rem;
+    }
+
+    .questions h6 {
+        font-size: 1.6rem;
+    }
+
+    .correct-answers,
+    .wrong-answers {
+        font-size: 1.1rem;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        height: 5vh;
+    }
+
+    #you-scored,
+    #computer-scored {
+        background-image: url(/images/football-pitch.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #you-scored img,
+    #computer-scored img {
+        height: 25rem;
+        width: 90%;
+    }
+
+    #end-of-quiz {
+        height: 95vh;
+    }
+
+    #end-of-quiz h2 {
+        margin-top: 20%;
+        font-size: 5rem;
+    }
+
+    .final-score-body{
+        background-image: url(../images/football-pitch.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .final-score h2 {
+        font-size: 5rem;
+    }
+
+    .final-score h4 {
+        font-size: 4rem;
+    }
+
+    .final-score img {
+        height: 17rem;
+        width: 90%;
+    }
+
+
 }
