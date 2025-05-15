@@ -74,7 +74,16 @@ answers.forEach(function(answer) {
     answer.addEventListener('click', function () {
         const parentDiv = answer.closest('.questions');
 
+        //code help from Chat GPT
+        const allAnswers = parentDiv.querySelectorAll('.answers');
+        allAnswers.forEach(btn => {
+            btn.style.pointerEvents = 'none';
+            btn.style.opacity = '0.6';
+        });
+        //
+
         if (answer.getAttribute('data-correct') === 'true') {
+            answer.style.backgroundColor = 'green';
             const goodChoice = parentDiv.querySelector('.correct-answers');
             goodChoice.style.display = 'flex';
             userScore++;
@@ -84,6 +93,7 @@ answers.forEach(function(answer) {
             }
 
         } else {
+            answer.style.backgroundColor = 'red';
             const badChoice = parentDiv.querySelector('.wrong-answers');
             badChoice.style.display = 'flex';
             computerScore++;
