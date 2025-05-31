@@ -1,3 +1,4 @@
+//grabbing elements from the HTML for each scoreboard result
 const fiveNilScore = document.getElementById('five-nil');
 const fourNilScore = document.getElementById('four-nil');
 const fourOneScore = document.getElementById('four-one');
@@ -10,16 +11,19 @@ const oneFourScore = document.getElementById('one-four');
 const nilFourScore = document.getElementById('nil-four');
 const nilFiveScore = document.getElementById('nil-five');
 
+//creating array for scoreboards and hiding all the scoreboard results initially
 let allScores = [fiveNilScore, fourNilScore, fourOneScore, threeOneScore, threeTwoScore, twoTwoScore, twoThreeScore, oneThreeScore, oneFourScore, nilFourScore, nilFiveScore];
 
 allScores.forEach(scores => {
     scores.style.display = 'none';
 })
 
+//getting the user and computer score from the URL parameters
 const params = new URLSearchParams(window.location.search);
 const userScoreResults = parseInt(params.get('user'), 10);
 const computerScoreResults = parseInt(params.get('computer'), 10);
 
+//displaying the user and computer scores in the HTML
 if (userScoreResults === 20) {
     fiveNilScore.style.display = 'flex';
 } else if (userScoreResults <20 && userScoreResults >15 && computerScoreResults <4) {

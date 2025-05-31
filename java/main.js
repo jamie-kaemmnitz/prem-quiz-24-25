@@ -1,8 +1,9 @@
-
+//grabbed the elements of the buttons from the HTML
 const nextQuestionButton = document.getElementsByClassName('next-question');
 const continueButton = document.getElementsByClassName('continue-button');
 const checkScoreButton = document.getElementById('check-score');
 
+//grabbed the elements of the questions from the HTML
 const arsenalQuestion = document.getElementById('arsenal');
 const astonVillaQuestion = document.getElementById('aston-villa');
 const bournemouthQuestion = document.getElementById('bournemouth');
@@ -24,19 +25,24 @@ const tottenhamQuestion = document.getElementById('tottenham');
 const westHamQuestion = document.getElementById('west-ham');
 const wolvesQuestion = document.getElementById('wolves');
 
+//turning the questions into an array
 let questionsArray = [arsenalQuestion, astonVillaQuestion, bournemouthQuestion, brentfordQuestion, brightonQuestion, chelseaQuestion, crystalPalaceQuestion, evertonQuestion, fulhamQuestion, ipswichQuestion, leicesterQuestion, liverpoolQuestion, manCityQuestion, manUtdQuestion, newcastleQuestion, nottinghamForestQuestion, southamptonQuestion, tottenhamQuestion, westHamQuestion, wolvesQuestion]
 
+//grabbed the elements of the answers from the HTML
 const answers = Array.from(document.getElementsByClassName('answers'));
 const correctAnswer = document.getElementsByClassName('correct-answers');
 const wrongAnswer = document.getElementsByClassName('wrong-answers');
 
+//grabbed the elements of the score from the HTML
 const youScored = document.getElementById('you-scored');
 const computerScored = document.getElementById('computer-scored');
 const endOfQuiz = document.getElementById('end-of-quiz');
 
+//setting the initial score to 0
 let userScore = 0;
 let computerScore = 0;
 
+//hiding the display of the elements
 Array.from(correctAnswer).forEach(answer => {
     answer.style.display = 'none';
 });
@@ -57,6 +63,7 @@ questionsArray.forEach(question => {
     question.style.display = 'none';
 });
 
+//code to allow questions to be displayed in a random order
 //code help from Chat GPT
 const params = new URLSearchParams(window.location.search);
 const questionIndex = parseInt(params.get('question'), 10);
@@ -70,6 +77,7 @@ if (!isNaN(questionIndex) || questionIndex < 0 || questionIndex >= questionsArra
 }
 //
 
+//adding event listeners to the answers
 answers.forEach(function(answer) {
     answer.addEventListener('click', function () {
         const parentDiv = answer.closest('.questions');
@@ -108,6 +116,7 @@ answers.forEach(function(answer) {
     });
 });
 
+//adding event listeners to the next question button and continue button
 Array.from(nextQuestionButton).forEach(button => {
     button.addEventListener('click', function () {
         questionsArray.forEach(question => question.style.display = 'none');
@@ -130,6 +139,7 @@ Array.from(continueButton).forEach(button => {
     });
 });
 
+//adding event listener to the check score button
 checkScoreButton.addEventListener('click', function () {
     window.location.href = `results.html?user=${userScore}&computer=${computerScore}`;
 });
