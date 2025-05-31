@@ -6,7 +6,7 @@ html, body {
 }
 
 .home-page {
-    background-image: url(../images/football-pitch-vertical.jpg);
+    background-image: url(images/football-pitch-vertical.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
