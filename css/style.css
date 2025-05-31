@@ -6,7 +6,7 @@ html, body {
 }
 
 .home-page {
-    background-image: url(/images/football-pitch-vertical.jpg);
+    background-image: url(../images/football-pitch-vertical.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -214,7 +214,7 @@ a {
     text-align: center;
     box-sizing: border-box;
     padding: 1rem;
-    background-image: url(/images/football-pitch-vertical.jpg);
+    background-image: url(../images/football-pitch-vertical.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -268,7 +268,7 @@ a {
 }
 
 #end-of-quiz {
-    background-image: url(/images/ref-whistle.jpg);
+    background-image: url(../images/ref-whistle.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -785,7 +785,7 @@ footer a {
 @media (min-width: 1025px) {
 
     .home-page {
-        background-image: url(/images/football-pitch.jpg);
+        background-image: url(../images/football-pitch.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -835,7 +835,7 @@ footer a {
 
     #you-scored,
     #computer-scored {
-        background-image: url(/images/football-pitch.jpg);
+        background-image: url(../images/football-pitch.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
