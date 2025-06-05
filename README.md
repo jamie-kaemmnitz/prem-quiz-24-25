@@ -14,7 +14,7 @@ There is a leave quiz button at the bottom of each question, if this is clicked 
 
 How to Install and Run
 ----------------------
-You cabn download the code by clicking the green code button and copying the link in the box, i worked on this project with VS Code, i believe this should be transferable to other software. You can also run the webpage by entering the following link into your browser - https://jamie-kaemmnitz.github.io/prem-quiz-24-25/
+You can download the code by clicking the green code button and copying the link in the box, i worked on this project with VS Code, i believe this should be transferable to other software. You can also run the webpage by entering the following link into your browser - https://jamie-kaemmnitz.github.io/prem-quiz-24-25/
 
 Credits
 -------
