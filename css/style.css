@@ -886,9 +886,9 @@ footer a {
   }
 
   .quiz-container {
-    width: 90%;       /* shrink to fit screen */
+    width: 95%;       /* shrink to fit screen */
     margin: 1rem auto;
-    padding: 1rem;
+    padding: 0.5rem;
     box-sizing: border-box;
   }
 
@@ -913,4 +913,28 @@ footer a {
   .wrong-answers.active {
     pointer-events: auto;
   }
+
+  /* Smaller text sizes for mobile */
+  body {
+    font-size: 14px; /* base text */
+  }
+
+  .questions {
+    font-size: 16px; /* question text */
+  }
+
+  button {
+    font-size: 14px; /* smaller buttons */
+    padding: 0.5rem 0.75rem;
+  }
+
+  h1, h2, h3 {
+    font-size: 18px; /* headings smaller */
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
 }
