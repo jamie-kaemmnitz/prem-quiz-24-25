@@ -878,3 +878,39 @@ footer a {
 
 
 }
+
+/* 📱 Mobile fixes for Samsung & smaller screens */
+@media (max-width: 600px) {
+  body, html {
+    overflow-x: hidden; /* stop sideways scroll */
+  }
+
+  .quiz-container {
+    width: 90%;       /* shrink to fit screen */
+    margin: 1rem auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;  /* stop GIFs/images pushing layout */
+    height: auto;
+    display: block;
+  }
+
+  button {
+    width: 100%;      /* full-width tap targets */
+    max-width: 300px; /* keeps them from stretching too wide */
+    margin: 0.5rem auto;
+  }
+
+  .correct-answers,
+  .wrong-answers {
+    pointer-events: none; /* stop them blocking taps when hidden */
+  }
+
+  .correct-answers.active,
+  .wrong-answers.active {
+    pointer-events: auto;
+  }
+}
