@@ -879,74 +879,126 @@ footer a {
 
 }
 
-/* 📱 Mobile fixes for Samsung & smaller screens */
+/* --- Samsung-safe mobile fixes --- */
+html {
+  -webkit-text-size-adjust: 100%; /* stop Samsung/Android auto scaling */
+  text-size-adjust: 100%;
+}
+
 @media (max-width: 600px) {
-  body, html {
-    overflow-x: hidden; /* stop sideways scroll */
+
+  /* General text */
+  body {
+    font-size: 12px;
   }
 
-  .home-page {
-    padding-top: 1rem; /* keep the top padding */
+  h1 {
+    font-size: 1.5rem;
   }
 
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  /* Instructions */
   .instructions-body p {
-    font-size: 12px; /* smaller text for instructions */
+    font-size: 0.9rem;
   }
 
-  .questions-body {
-    width: 95%;       /* shrink to fit screen */
-    margin: 1rem auto;
+  /* Questions */
+  .questions {
+    font-size: 0.9rem;
     padding: 0.5rem;
-    box-sizing: border-box;
   }
 
-  img {
-    max-width: 100%;  /* stop GIFs/images pushing layout */
-    height: auto;
-    display: block;
+  .questions h2 {
+    font-size: 1.2rem;
   }
 
-  button {
-    width: 100%;      /* full-width tap targets */
-    max-width: 300px; /* keeps them from stretching too wide */
-    margin: 0.5rem auto;
+  .questions h6 {
+    font-size: 0.9rem;
+  }
+
+  .questions button {
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .next-question {
+    font-size: 1rem !important;
+    height: 2.5rem !important;
   }
 
   .correct-answers,
   .wrong-answers {
-    pointer-events: none; /* stop them blocking taps when hidden */
+    font-size: 0.9rem;
   }
 
-  .correct-answers.active,
-  .wrong-answers.active {
-    pointer-events: auto;
+  /* Final score */
+  .final-score h2 {
+    font-size: 1.4rem;
   }
 
-  /* Smaller text sizes for mobile */
-  body {
-    font-size: 12px; /* base text */
+  .final-score h4 {
+    font-size: 1.2rem;
   }
 
-  .questions {
-    font-size: 12px; /* question text */
+  .final-score h5 {
+    font-size: 1rem;
   }
 
-  button {
-    font-size: 10px; /* smaller buttons */
-    padding: 0.5rem 0.75rem;
-  }
-
-  h1, h2, h3 {
-    font-size: 14px; /* headings smaller */
-  }
-
-  p {
-    font-size: 10px; /* paragraph text */
-  }
-
-  img {
-    max-width: 100%;
+  .final-score img {
+    max-width: 90%;
     height: auto;
   }
 
+  /* End of quiz */
+  #end-of-quiz h2 {
+    font-size: 1.5rem;
+    margin-top: 40%;
+  }
+
+  #check-score {
+    font-size: 0.9rem;
+    width: 8rem;
+    height: 3rem;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Buttons */
+  button,
+  .continue-button,
+  a {
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 280px;
+    height: 2.5rem;
+    margin: 0.5rem auto;
+  }
+
+  /* Footer */
+  footer {
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  footer a {
+    font-size: 0.8rem;
+  }
 }
