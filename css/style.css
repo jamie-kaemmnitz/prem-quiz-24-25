@@ -916,20 +916,24 @@ footer a {
 
   /* Smaller text sizes for mobile */
   body {
-    font-size: 14px; /* base text */
+    font-size: 12px; /* base text */
   }
 
   .questions {
-    font-size: 16px; /* question text */
+    font-size: 12px; /* question text */
   }
 
   button {
-    font-size: 14px; /* smaller buttons */
+    font-size: 10px; /* smaller buttons */
     padding: 0.5rem 0.75rem;
   }
 
   h1, h2, h3 {
-    font-size: 18px; /* headings smaller */
+    font-size: 14px; /* headings smaller */
+  }
+
+  p {
+    font-size: 10px; /* paragraph text */
   }
 
   img {
