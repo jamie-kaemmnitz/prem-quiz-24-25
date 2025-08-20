@@ -916,29 +916,44 @@ html {
     font-size: 0.9rem;
   }
 
+  body, .questions-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
   /* Questions */
-  .questions {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-    flex: 1 0 auto;       /* lets it grow but not push footer off-screen */
-    overflow-y: auto;     /* allows scrolling if content is too tall */
-    box-sizing: border-box; /* ensures padding is included in height */
-  }
+    .questions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* center content vertically */
+        align-items: center;
+        flex: 1 1 auto;          /* grow and shrink to fit */
+        padding: 1rem;
+        box-sizing: border-box;
+        overflow: hidden;        /* no scrolling */
+        gap: 1rem;
+    }
 
-  .questions h2 {
-    font-size: 1.2rem;
-  }
+    .questions h2 {
+        font-size: clamp(1rem, 4vw, 2rem);
+        margin: 0.5rem 0;
+    }
 
-  .questions h6 {
-    font-size: 0.9rem;
-  }
+    .questions h6 {
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
+    }
 
-  .questions button {
-    width: 100%;
-    max-width: 280px;
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
+    .questions button, .next-question {
+        width: 80%;
+        max-width: 280px;
+        font-size: clamp(0.8rem, 3vw, 1rem);
+        height: auto;
+        padding: 0.5rem;
+    }
+
 
   .next-question {
     font-size: 1rem !important;
@@ -999,10 +1014,11 @@ html {
   }
 
   /* Footer */
-  footer {
-    height: auto;
-    padding: 0.5rem;
-  }
+    footer {
+        flex-shrink: 0;   /* don’t shrink the footer */
+        width: 100%;
+        padding: 0.5rem;
+    }
 
   footer a {
     font-size: 0.8rem;
@@ -1019,6 +1035,6 @@ html {
 
   .you-scored h2,
   .computer-scored h2 {
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
 }
