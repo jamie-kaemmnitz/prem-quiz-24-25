@@ -885,7 +885,15 @@ footer a {
     overflow-x: hidden; /* stop sideways scroll */
   }
 
-  .quiz-container {
+  .home-page {
+    padding-top: 1rem; /* keep the top padding */
+  }
+
+  .instructions-body p {
+    font-size: 12px; /* smaller text for instructions */
+  }
+
+  .questions-body {
     width: 95%;       /* shrink to fit screen */
     margin: 1rem auto;
     padding: 0.5rem;
