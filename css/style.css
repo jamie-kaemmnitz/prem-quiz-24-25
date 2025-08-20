@@ -917,6 +917,7 @@ html {
   .questions {
     font-size: 0.9rem;
     padding: 0.5rem;
+    height: 97%;
   }
 
   .questions h2 {
@@ -1000,5 +1001,15 @@ html {
 
   footer a {
     font-size: 0.8rem;
+  }
+
+  .home-page {
+    padding-top: 1rem;
+  }
+
+  .you-scored,
+  .computer-scored {
+    padding: 1rem;
+    font-size: 0.9rem;
   }
 }
