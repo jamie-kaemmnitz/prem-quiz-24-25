@@ -116,11 +116,12 @@ answers.forEach(function(answer) {
     });
 });
 
-//adding event listeners to the next question button and continue button
-Array.from(nextQuestionButton).forEach(button => {
-    button.addEventListener('click', function () {
-        questionsArray.forEach(question => question.style.display = 'none');
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('next-question')) {
+        // Hide previous question
+        questionsArray.forEach(q => q.style.display = 'none');
 
+        // Remove current question from array
         questionsArray.splice(currentQuestionIndex, 1);
 
         if (questionsArray.length > 0) {
@@ -129,7 +130,7 @@ Array.from(nextQuestionButton).forEach(button => {
         } else {
             endOfQuiz.style.display = 'flex';
         }
-    });
+    }
 });
 
 Array.from(continueButton).forEach(button => {

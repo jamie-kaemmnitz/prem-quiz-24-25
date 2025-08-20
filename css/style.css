@@ -890,6 +890,9 @@ html {
   /* General text */
   body {
     font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
 
   h1 {
@@ -917,7 +920,9 @@ html {
   .questions {
     font-size: 0.9rem;
     padding: 0.5rem;
-    height: 97%;
+    flex: 1 0 auto;       /* lets it grow but not push footer off-screen */
+    overflow-y: auto;     /* allows scrolling if content is too tall */
+    box-sizing: border-box; /* ensures padding is included in height */
   }
 
   .questions h2 {
