@@ -928,7 +928,7 @@ html {
     .questions {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         flex: 1 1 auto;          /* grow and shrink to fit */
         padding: 0.5rem;
