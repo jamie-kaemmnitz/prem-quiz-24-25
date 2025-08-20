@@ -1015,6 +1015,10 @@ html {
   .you-scored,
   .computer-scored {
     padding: 1rem;
-    font-size: 0.9rem;
+  }
+
+  .you-scored h2,
+  .computer-scored h2 {
+    font-size: 1rem;
   }
 }
